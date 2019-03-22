@@ -2,14 +2,21 @@
 <html>
 <head>
   <script type="text/javascript" src="bundle.js"></script>
-  <title>Ping Pong</title>
+  <title>Doctor Finder</title>
 </head>
 <body>
-  <form id="ping-pong-form">
-    <label for="goal">Enter a number:</label>
-    <input id="goal" type="number">
-    <button type="submit">Submit</button>
-  </form>
-  <ul id="solution"></ul>
+  <div class="content">
+    <input id="conditon" type="text" placeholder="List your condition">
+    <input id="name" type="text" placeholder="Find doctor by name">
+    <button type="button" id="findDoctors">View results</button>
+
+    <div class="output">
+
+    </div>
+
+    <div class="showErrors">
+
+    </div>
+  </div>
 </body>
 </html>
