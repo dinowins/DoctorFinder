@@ -32,6 +32,9 @@ $(document).ready(function(){
           const firstName = body.data[i].profile.first_name;
           const lastName = body.data[i].profile.first_name;
           $(".output").append("<p> Name: " + firstName + " " + lastName + "</p>");
+
+          const address = body.data.practices[0].visit_address.street;
+$(".output").append("<p> Street address: " + address + " Portland, Or</p>");
         }
       }
     });
