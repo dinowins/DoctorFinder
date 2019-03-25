@@ -14,12 +14,21 @@ $(document).ready(function(){
     const name = $(".name").val();
     $(".name").val();
 
-    let findDoc = new findDoctor();
-    let promise = findDoc.findByCondition(condition);
+    const findDoc = new findDoctor();
+    const promise = findDoc.findByCondition(condition);
 
     promise.then(function(response) {
       let body = JSON.parse(response);
-      console.log(body.data[0].profile.image_url);
+      console.log(body);
+      if(body.data.length < 0) {
+        $(".output").append("<p>There are no doctors in the area that match the conditions.</p>");
+      } else {
+        for (let i = 0; i < 20; i++) {
+          console.log(body);
+        //   const pic =
+        //   $(".output").append(``)
+        // }
+      }
     });
 
 
