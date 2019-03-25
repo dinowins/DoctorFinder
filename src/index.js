@@ -6,7 +6,7 @@ import './sass/styles.scss';
 import { findDoctor } from './../src/api.js'
 
 $(document).ready(function(){
-  $("#form").click(function(event) {
+  $("#findDoctors").click(function(event) {
     event.preventDefault();
 
     const condition = $(".condition").val();
@@ -25,8 +25,10 @@ $(document).ready(function(){
       } else {
         for (let i = 0; i < 20; i++) {
           console.log(body);
-        //   const pic =
-        //   $(".output").append(``)
+
+          const pic = body.data[i].profile.image_url;
+          $(".output").append("<img src='" + pic + "'>");
+
         }
       }
     });
