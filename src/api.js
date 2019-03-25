@@ -1,15 +1,18 @@
-export function pingPong(goal) {
-  var output = [];
-  for (var i = 1; i <= goal; i++) {
-    if (i % 15 === 0) {
-      output.push("ping-pong");
-    } else if (i % 3 === 0) {
-      output.push("ping");
-    } else if (i % 5 === 0) {
-      output.push("pong");
-    } else  {
-      output.push(i);
-    }
-  }
-  return output;
+export function findDoctor {
+  findByCondition(condition) {
+    var Promise = require('es6-promise').Promise;
+    return new Promise(function(resolve, reject) {
+      let request = new XMLHttpRequest();
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${condition}&location=or-portland&sort=best-match-asc&skip=0&limit=20&user_key=${process.env.exports.apiKey}`;
+      request.onload = function() {
+        if (this.status === 200) {
+          resolve(request.response);
+        } else {
+          reject(Error(request.statusText));
+        }
+      }
+      request.open("GET", url, true);
+      request.send();
+    });
+  };
 }
