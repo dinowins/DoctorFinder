@@ -39,6 +39,9 @@ $(document).ready(function(){
           const address = body.data.practices[0].visit_address.street;
           $(".output").append("<p> Street address: " + address + " Portland, Or</p>");
 
+          const phoneNumber = body.data.practices[0].phones[0].number;
+          $(".output").append("<p> Phone Number: " + phoneNumber + "</p>");
+
 
         }
       }
