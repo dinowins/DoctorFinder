@@ -29,6 +29,9 @@ $(document).ready(function(){
           const pic = body.data[i].profile.image_url;
           $(".output").append("<img src='" + pic + "'>");
 
+          const firstName = body.data[i].profile.first_name;
+          const lastName = body.data[i].profile.first_name;
+          $(".output").append("<p> Name: " + firstName + " " + lastName + "</p>");
         }
       }
     });
