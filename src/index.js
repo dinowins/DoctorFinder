@@ -27,7 +27,7 @@ $(document).ready(function(){
           console.log(body);
         //   const pic =
         //   $(".output").append(``)
-        // }
+        }
       }
     });
 
