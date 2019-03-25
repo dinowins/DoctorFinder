@@ -42,7 +42,8 @@ $(document).ready(function(){
           const phoneNumber = body.data.practices[0].phones[0].number;
           $(".output").append("<p> Phone Number: " + phoneNumber + "</p>");
 
-
+          const website = body.date[i].practices[0].website;
+          $(".output").append("<p> Website: " + website + "</p>");
         }
       }
     });
