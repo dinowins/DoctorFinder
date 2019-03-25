@@ -1,4 +1,4 @@
-export function findDoctor {
+export class findDoctor {
   findByCondition(condition) {
     var Promise = require('es6-promise').Promise;
     return new Promise(function(resolve, reject) {
