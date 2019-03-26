@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="bundle.js"></script>
+  <script type="text/javascript" src="index.js"></script>
   <title>Doctor Finder</title>
 </head>
 <body>
-  <div class="content">
+  <div>
     <form id="form">
-      <input id="condition" type="text" placeholder="List your condition">
-      <input id="name" type="text" placeholder="Find doctor by name">
-      <button id="findDoctors">View results</button>
+      <div class="form-group">
+        <input id="condition" type="text" placeholder="List your condition">
+        <input id="name" type="text" placeholder="Find doctor by name">
+        <button id="find" type="submit">View results</button>
+      </div>
     </form>
 
     <div class="output"></div>
