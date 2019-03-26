@@ -1,7 +1,4 @@
 export class findDoctor {
-  constructor() {
-
-  }
 
   findByCondition(condition, firstName, lastName) {
     const Promise = require('es6-promise').Promise;

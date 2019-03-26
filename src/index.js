@@ -9,6 +9,8 @@ $(document).ready(function(){
   $("#form").submit(function(event) {
     event.preventDefault();
 
+    $(".output").empty();
+
     const condition = $("#condition").val();
     $("#condition").val();
     const firstName = $("#first-name").val();
