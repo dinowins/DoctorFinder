@@ -23,16 +23,15 @@ $(document).ready(function(){
         $(".output").append("<p>There are no doctors in the area that match the conditions.</p>");
       }
       else {
-        for (let i = 0; i < 20; i++) {
-          console.log(i);
-          // let pic = body.data[i].profile.image_url;
-          $(".output").append(`<img src=${body.data[i].profile.image_url}>`);
-          $(".output").append(`<p> Name: ${body.data[i].profile.first_name} ${body.data[i].profile.last_name}</p>`);
-          $(".output").append(`<p>Address: ${body.data[i].practices[i].visit_address.street}</p>`);
-          $(".output").append(`<p>Accepting New Patients: ${body.data[i].practices[0].accepts_new_patients}</p>`);
-          $(".output").append(`<p>Phone Number: ${body.data[i].practices[i].phones[0].number}</p>`);
+        body.data.forEach(function(index){
+          console.log(index);
+          $(".output").append(`<img src=${index.profile.image_url}>`);
+          $(".output").append(`<p> Name: ${index.profile.first_name} ${index.profile.last_name}</p>`);
+          $(".output").append(`<p>Address: ${index.practices[0].visit_address.street}</p>`);
+          $(".output").append(`<p>Accepting New Patients: ${index.practices[0].accepts_new_patients}</p>`);
+          $(".output").append(`<p>Phone Number: ${index.practices[0].phones[0].number}</p>`);
           // $(".ouput").append(`<p>Website: ${body.date[i].practices[0].website}</p>`);
-        }
+        });
       }
     });
   });
