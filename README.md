@@ -10,11 +10,19 @@ Run npm install to install the environment and dependencies.
 
 Run tests using npm test.
 
+Create a .env file and place exports.apiKey = (YOUR UNIQUE API KEY) in the file
+
+To use the api key, preface it with process.env i.e. process.env.API_KEY
+
 ```bash
 git clone https://github.com/dinowins/DoctorFinder.git
 npm install
 npm test
+touch .env
+exports.apiKey=34930adhfllajio103948 // example
 ```
+
+Sign up for a BetterDoctor account and API key at https://developer.betterdoctor.com/.
 
 ## Usage
 
