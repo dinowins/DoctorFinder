@@ -11,11 +11,13 @@ $(document).ready(function(){
 
     const condition = $("#condition").val();
     $("#condition").val();
-    const name = $("#name").val();
-    $("#name").val();
+    const firstName = $("#first-name").val();
+    $("#first-name").val();
+    const lastName = $("#last-name").val();
+    $("#last-name").val();
 
     const findDoc = new findDoctor();
-    let promise = findDoc.findByCondition(condition);
+    let promise = findDoc.findByCondition(condition, firstName, lastName);
     promise.then(function(response) {
       let body = JSON.parse(response);
       console.log(body);
