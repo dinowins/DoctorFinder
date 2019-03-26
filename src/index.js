@@ -24,25 +24,14 @@ $(document).ready(function(){
       }
       else {
         for (let i = 0; i < 20; i++) {
-          console.log("This ran");
-          const pic = body.data[i].profile.image_url;
-          $(".output").append("<img src='" + pic + "'>");
-
-          const firstName = body.data[i].profile.first_name;
-          const lastName = body.data[i].profile.last_name;
-          $(".output").append("<p> Name: " + firstName + " " + lastName + "</p>");
-
-          const acceptPatients = body.data.practices[0].accepts_new_patients;
-          $(".output").append("<p> Accepting new patients: " + acceptPatients + "</p>");
-
-          const address = body.data.practices[0].visit_address.street;
-          $(".output").append("<p> Street address: " + address + " Portland, Or</p>");
-
-          const phoneNumber = body.data.practices[0].phones[0].number;
-          $(".output").append("<p> Phone Number: " + phoneNumber + "</p>");
-
-          const website = body.date[i].practices[0].website;
-          $(".output").append("<p> Website: " + website + "</p>");
+          console.log(i);
+          // let pic = body.data[i].profile.image_url;
+          $(".output").append(`<img src=${body.data[i].profile.image_url}>`);
+          $(".output").append(`<p> Name: ${body.data[i].profile.first_name} ${body.data[i].profile.last_name}</p>`);
+          $(".output").append(`<p>Address: ${body.data[i].practices[i].visit_address.street}</p>`);
+          $(".output").append(`<p>Accepting New Patients: ${body.data[i].practices[0].accepts_new_patients}</p>`);
+          $(".output").append(`<p>Phone Number: ${body.data[i].practices[i].phones[0].number}</p>`);
+          // $(".ouput").append(`<p>Website: ${body.date[i].practices[0].website}</p>`);
         }
       }
     });
